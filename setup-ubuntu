@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt-get update
-sudo apt-get install -y vim screen mc tmux iptraf-ng tcpdump
+sudo apt-get install -y vim screen mc tmux iptraf-ng tcpdump terminator
 if [[ -f google-chrome-stable_current_amd64.deb ]]
 then
 	rm -f google-chrome-stable_current_amd64.deb
@@ -9,17 +9,19 @@ wget -q --show-progress https://dl.google.com/linux/direct/google-chrome-stable_
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt-get purge -y snapd
 sudo apt-get autoremove --purge -y
-if [[ ! -f ~/Pictures/background/win-bg.png ]]
+if [[ ! -f ~/Pictures/background/blue.png ]]
 then
 	mkdir -p ~/Pictures/background
-	(cd ~/Pictures/background && wget -q --show-progress http://share.socha.it/bg/win-bg.png)
+	cp bg/blue.png ~/Pictures/background/
 fi
-gsettings set org.gnome.desktop.screensaver picture-uri "file:///home/$USER/Pictures/background/win-bg.png"
-gsettings set org.gnome.desktop.background picture-uri "file:///home/$USER/Pictures/background/win-bg.png"
+cp -ar config/.config/terminator ~/.config/
+gsettings set org.gnome.desktop.screensaver picture-uri "file:///home/$USER/Pictures/background/blue.png"
+gsettings set org.gnome.desktop.background picture-uri "file:///home/$USER/Pictures/background/blue.png"
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 26
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
 gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action previews
 gsettings set org.gnome.desktop.interface clock-show-seconds true
 # Disable Wayland
 sudo sed -i -e 's/#WaylandEnable=false/WaylandEnable=false/' /etc/gdm3/custom.conf
