@@ -1,0 +1,43 @@
+[global_config]
+  focus = system
+  tab_position = bottom
+  broadcast_default = off
+  scroll_tabbar = True
+  title_transmit_bg_color = "#4b87d4"
+  inactive_color_offset = 1.0
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler
+  always_split_with_profile = True
+  title_use_system_font = False
+  title_font = Monospace 15
+  putty_paste_style = True
+[keybindings]
+[profiles]
+  [[default]]
+    visible_bell = True
+    icon_bell = False
+    cursor_color = "#aaaaaa"
+    font = Monospace 15
+    scrollback_infinite = True
+    use_system_font = False
+    copy_on_selection = True
+    split_to_group = True
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 25:92
+      maximised = False
+      fullscreen = False
+      size = 1814, 997
+      title = socha@ws: ~
+      last_active_term = ed4dcaca-b881-41a7-b7f5-b77860abb86c
+      last_active_window = True
+    [[[terminal1]]]
+      type = Terminal
+      parent = child0
+      order = 0
+      profile = default
+      uuid = ed4dcaca-b881-41a7-b7f5-b77860abb86c
+[plugins]
