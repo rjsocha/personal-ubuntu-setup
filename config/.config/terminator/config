@@ -27,10 +27,10 @@
       type = Window
       parent = ""
       order = 0
-      position = 100:60
+      position = 100:40
       maximised = False
       fullscreen = False
-      size = 1600, 900
+      size = 1400, 840
       title = Terminator
       last_active_term = ed4dcaca-b881-41a7-b7f5-b77860abb86c
       last_active_window = True
