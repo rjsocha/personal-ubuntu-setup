@@ -27,11 +27,11 @@
       type = Window
       parent = ""
       order = 0
-      position = 25:92
+      position = 100:60
       maximised = False
       fullscreen = False
-      size = 1814, 997
-      title = socha@ws: ~
+      size = 1600, 900
+      title = Terminator
       last_active_term = ed4dcaca-b881-41a7-b7f5-b77860abb86c
       last_active_window = True
     [[[terminal1]]]
